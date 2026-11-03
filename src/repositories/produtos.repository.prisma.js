@@ -9,4 +9,16 @@ import { prisma } from '../config/database.js';
 // Dica: use `prisma.produto.*`. Tudo é assíncrono.
 export class ProdutosRepositoryPrisma {
   // TODO: implemente os métodos descritos acima.
+
+  async criar(payload, categoria) { 
+    const produto = await prisma.produto.create({
+      data: payload,
+      categoria: categoria
+    });
+    return produto;
+  }
+
+  async listar() {
+    return prisma.produto.findMany();
+  }
 }
