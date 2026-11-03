@@ -23,3 +23,17 @@ datasource db {
 
 // TODO: model Categoria { ... }
 // TODO: model Produto   { ... }
+
+model Categoria {
+  
+  nome String @unique
+
+}
+
+model Produto {
+
+  nome String @unique
+  preco Int
+  categoria Categoria 
+
+}
