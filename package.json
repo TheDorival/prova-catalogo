@@ -9,16 +9,30 @@
     "studio": "prisma studio"
   },
   "dependencies": {
-    "@prisma/client": "^5.22.0",
+    "@prisma/adapter-better-sqlite3": "^7.10.1",
     "connect-flash": "^0.1.1",
+    "dotenv": "^18.0.9",
     "ejs": "^3.1.10",
-    "express": "^4.21.2",
+    "express": "^4.22.3",
     "express-ejs-layouts": "^2.5.1",
     "express-session": "^1.18.1",
     "express-validator": "^7.2.0",
     "method-override": "^3.0.0"
   },
   "devDependencies": {
-    "prisma": "^5.22.0"
-  }
+    "@prisma/client": "^7.10.1",
+    "prisma": "^7.10.1"
+  },
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheDorival/prova-catalogo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TheDorival/prova-catalogo/issues"
+  },
+  "homepage": "https://github.com/TheDorival/prova-catalogo#readme"
 }
