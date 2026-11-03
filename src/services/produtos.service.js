@@ -15,5 +15,14 @@ export class ProdutosService {
     this.repo = produtosRepository;
     this.categoriasRepo = categoriasRepository; // para checar se a categoria existe
   }
+
+  async criar(payload) {
+    const jaExiste = this.categoriasRepository.categoria();
+
+    if (jaExiste) {
+      throw new AppError("Erro: Esta categoria já existe.", 409);
+    }
+  }
+
   // TODO: criar(dados), listar().
 }
